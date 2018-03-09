@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+<div class="container">
+	<div class="main">
+		<div class="movie_input"> 
+			<form action="/search" method="post">
+				<input type="text" name="movie_name" placeholder="movie's name">
+				<button type="submit">search</button>
+			</form>
+		</div>	
+		<div class="lastest_movie">
+			<div class="whats_on">Lastest Movies:</div>
+			
+			</div>
+		</div>
+		<div class="top_series">
+		<h2>Top 5 Series</h2>
+			<div class="gameOfT_series">
+			<p><%= @gameOfT_series["Title"] %></p>
+			<a href="/movie?imdbID=<%= @gameOfT_series['imdbID'] %>"><%= @gameOfT_series['Title'] %></a>
+			<img class="gameOfT_poster" src="<%= @gameOfT_series["Poster"] %>">
+			</div>
+				
+			<div class="friends_series">
+			<p><%= @friends_series["Title"] %></p>
+			<a href="/movie?imdbID=<%= @friends_series['imdbID'] %>"><%= @friends_series['Title'] %></a>
+			<img class="gameOfT_poster" src="<%= @friends_series["Poster"] %>">
+			</div>
+
+			<div class="better_call_saul_series">
+			<p><%= @better_call_saul_series["Title"] %></p>
+			<a href="/movie?imdbID=<%= @better_call_saul_series['imdbID'] %>"><%= @better_call_saul_series['Title'] %></a>
+			<img class="gameOfT_poster" src="<%= @better_call_saul_series["Poster"] %>">
+			</div>
+
+			<div class="sherlock_series">
+			<p><%= @sherlock_series["Title"] %></p>
+			<a href="/movie?imdbID=<%= @sherlock_series['imdbID'] %>"><%= @sherlock_series['Title'] %></a>
+			<img class="gameOfT_poster" src="<%= @sherlock_series["Poster"] %>">
+			</div>
+
+			<div class="peaky_blinders_series">
+			<p><%= @peaky_blinders_series["Title"] %></p>
+			<a href="/movie?imdbID=<%= @peaky_blinders_series['imdbID'] %>"><%= @peaky_blinders_series['Title'] %></a>
+			<img class="gameOfT_poster" src="<%= @peaky_blinders_series["Poster"] %>">
+			</div>
+		</div>
+	
+	</div>
+</div>
+</body>
+</html>
